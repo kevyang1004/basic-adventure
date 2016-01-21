@@ -10,8 +10,10 @@ def in_front_of_the_parking_lot():
     print "There is a radio."
     print "Are you going to get a radio or not?"
 
+# It let us choose from the choices
     choice = raw_input("> ")
 
+# If this choice was typed, those things will happen
     if choice == "yes":
         print "........Is..there.....anyone..who...survived?"
         print "..There....is...a refuge...in..Time Square"
@@ -20,11 +22,12 @@ def in_front_of_the_parking_lot():
         print "And I gotta take that car and drive through"
         in_the_car()
 
+# Other things beside if choice. That will happen
     else:
         dead("WAAAAA... you just killed by the zombi....")
 
 
-# This let us know that we are in the road
+# explain what happen in that place
 def road():
     print "You're driving the car..."
     print "There are many zombies out there"
@@ -32,7 +35,7 @@ def road():
     start()
 
 
-# This let us know that we are in the car
+# explaing what happen in that place
 def in_the_car():
     print "Ohhhh!!!! there is the U.S. army! I'm saved!!!!"
     print "Soldier: Hello sir, how old are you?"
@@ -41,41 +44,48 @@ def in_the_car():
     army_camp()
 
 
-# This let us know that this we are in the army camp
+# explain what happen in that place
 def army_camp():
     print "General: Welcome to the army camp!"
     print "General: We are going to kill all the zombies!"
     print "Yeahhhhhh~!!!"
     print "General: What do you want to be between attacker or driver?"
 
+# give us the choices to choose
     choice = raw_input("> ")
 
+# choice 1. The thing under the choice, will happen
     if choice == "attacker":
         print "General: We will be facing the zombies and kill them!!"
         in_the_truck()
 
+# choice 2. The thing under the choice, will happen
     elif choice == "driver":
         print "General: You are going to drive through the place where zombies live"
         driver_seat()
 
+# Other any answers beside those two choices, will happen
     else:
         dead("You're so weak!!! get out of the army!!!!")
 
 
-# This let us know that we are in the truck
+# explain what happen in that place
 def in_the_truck():
     print "I'm so afraid..."
     print "~crashhhh~"
     print "Soldier: Zombies just attacked the truck!! Get out your rifle and shoot them!!"
     print "Will you go and fight with zombies or hide?"
 
+# choices to choose to go through the game
     choice = raw_input("> ")
 
+# choice 1.
     if choice == "fight":
         print "Bang, bang, bang!"
         print "There is the Time Square! let's go there.."
         Time_Square()
 
+# choice 2.
     elif choice == "hide":
         print "I'm so afraid of them.. this is the bomb! let's use it!"
         print "--------Booooooooom--------"
@@ -84,11 +94,12 @@ def in_the_truck():
         print "General: Ok.. I will remember your name. Let's go back to the camp!"
         General_room()
 
+# Other any answers beside those two choices
     else:
         dead("Zombi just took yout head out")
 
 
-# This let us know that we are in the Time Square
+# explain what happen in that place
 def Time_Square():
     print "Finally... I got to the Time Square!"
     print "But I can't find the survivers..."
@@ -96,6 +107,7 @@ def Time_Square():
     dead("It was your destiny from the beginning")
 
 
+# explain what happen in that place
 def General_room():
     print "I saw your good work... I think you could be the general after me..."
     print "You just became the general!!!"
@@ -112,29 +124,30 @@ def dead(why):
     exit(0)
 
 
-# This let us know that this is the beginning
+# beginning of the game
 def start():
     print "You're at the parking lot"
     print "You can hear the screaming sound of zombies"
     print "There is a rifle and car"
     print "which one would you take?"
 
-# This makes the choice that we can choose
+# choice to choose
     choice = raw_input("> ")
 
-# This let us know what happen if we choose rifle
+# explain what happen if we choose that answer
     if choice == "rifle":
         print "I'm gonna kill all the zombies hahaha"
         in_front_of_the_parking_lot()
 
-# This let us know what happen if we choose car
+# explain what happen if we choose that answer
     elif choice == "car":
         print "Ok, let's get out of here!"
         road()
 
-# This let us know what happen if we choose another one
+# Other any answers will be dead.
     else:
         dead("I'm starving...")
 
 
+# make the game beginning
 start()
